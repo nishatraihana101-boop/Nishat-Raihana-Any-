@@ -1,0 +1,215 @@
+<!--
+Instructions:
+1. Save this file as `index.html`.
+2. Put your photo file in the same folder and name it `photo.jpg` (or change the <img> src below to match your filename).
+3. Open index.html in a browser to preview. 
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nishat Raihana Any — Registered Midwife</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink-1: #F9E7EC; /* very soft */
+      --pink-2: #F3C7D1; /* soft pink */
+      --pink-3: #E99DB0; /* deeper */
+      --accent: #b85a7b;
+      --muted: #6b6b6b;
+      --radius: 16px;
+      --max-width: 1000px;
+    }
+    *{box-sizing: border-box}
+    body{
+      margin:0;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #fff 0%, var(--pink-1) 100%);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background: #fff;
+      border-radius:24px;
+      box-shadow: 0 10px 30px rgba(184,90,123,0.08);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 360px 1fr;
+      gap: 32px;
+      padding: 32px;
+      align-items:center;
+    }
+    @media(max-width:900px){
+      .container{grid-template-columns: 1fr; padding:24px}
+    }
+    /* Left column */
+    .profile-card{
+      background: linear-gradient(180deg, rgba(243,199,209,0.12), rgba(233,159,177,0.04));
+      border-radius:16px;
+      padding:20px;
+      text-align:center;
+    }
+    .avatar{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid rgba(255,255,255,0.85);
+      box-shadow: 0 6px 20px rgba(233,159,177,0.18);
+      margin:0 auto 18px;
+      background: #fff;
+    }
+    h1{
+      font-family: 'Playfair Display', serif;
+      font-weight:700;
+      margin:8px 0 4px;
+      font-size:24px;
+      color:var(--accent);
+    }
+    .role{
+      font-weight:600;
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:12px;
+    }
+    .workplace{
+      background: linear-gradient(90deg, rgba(233,159,177,0.12), rgba(243,199,209,0.12));
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--accent);
+      margin-bottom:14px;
+    }
+    .contact-list{margin-top:8px;text-align:left}
+    .contact-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px dashed rgba(0,0,0,0.04)}
+    .contact-item:first-of-type{border-top:0}
+    .contact-label{font-weight:600;color:var(--muted);width:90px}
+    .contact-value a{color:var(--accent);text-decoration:none;font-weight:600}
+
+    /* Right column */
+    .content{padding-right:10px}
+    .section{margin-bottom:22px}
+    .section h2{font-family:'Playfair Display', serif;color:#333;margin:0 0 12px;font-size:20px}
+    .about{line-height:1.6;color:#333}
+    .skills{display:flex;gap:10px;flex-wrap:wrap}
+    .skill{background:var(--pink-1);padding:8px 12px;border-radius:999px;font-weight:600;color:var(--accent);font-size:13px;border:1px solid rgba(233,159,177,0.07)}
+
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media(max-width:700px){.cards{grid-template-columns:1fr}}
+    .card{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff, #fff);border:1px solid rgba(0,0,0,0.04)}
+    .small{font-size:13px;color:var(--muted)}
+
+    .cta{display:flex;gap:12px;margin-top:8px}
+    .btn{padding:10px 14px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid rgba(184,90,123,0.12);color:var(--accent)}
+
+    footer{margin-top:10px;color:var(--muted);font-size:13px;text-align:center}
+
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <div class="profile-card">
+      <img src="photo.jpg" alt="Nishat Raihana" class="avatar" onerror="this.src='https://via.placeholder.com/200x200.png?text=Photo'">
+      <h1>Nishat Raihana Any</h1>
+      <div class="role">Registered Midwife</div>
+      <div class="workplace">Sara Medical Center</div>
+
+      <div class="contact-list">
+        <div class="contact-item"><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:+8801648455431">+880 1648-455431</a></div></div>
+        <div class="contact-item"><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:nishatraihana.midwife@gmail.com">nishatraihana.midwife@gmail.com</a></div></div>
+        <div class="contact-item"><div class="contact-label">Location</div><div class="contact-value">Sara Medical Center</div></div>
+      </div>
+
+      <div style="margin-top:16px">
+        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+        <a href="#" class="btn btn-ghost" onclick="window.print();return false">Print</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <section class="section about-section">
+        <h2>About Me</h2>
+        <p class="about">I am a Registered Midwife with a calm heart and a steady hand. At Sara Medical Center I support families through the whole journey of pregnancy — from gentle antenatal care and tailored birth planning to skilled labour support and compassionate postnatal guidance. I blend evidence-based clinical practice with cultural sensitivity and clear communication, because every birth is unique and every family deserves respectful, dignified care. I find deep purpose in empowering parents with education, advocating for safe childbirth, and helping newborns take their very first breaths with confidence and calm.</p>
+      </section>
+
+      <section class="section">
+        <h2>Core Skills</h2>
+        <div class="skills">
+          <div class="skill">Antenatal Care</div>
+          <div class="skill">Labour Support</div>
+          <div class="skill">Postnatal Care</div>
+          <div class="skill">Neonatal Resuscitation</div>
+          <div class="skill">Family Education</div>
+          <div class="skill">Clinical Documentation</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experience & Education</h2>
+        <div class="cards">
+          <div class="card">
+            <div style="font-weight:700">Registered Midwife</div>
+            <div class="small">Sara Medical Center — Present</div>
+            <p class="small">Providing antenatal clinics, labour and delivery support, and bedside postnatal care. Collaborates with obstetric teams and conducts community education sessions on newborn care and breastfeeding support.</p>
+          </div>
+
+          <div class="card">
+            <div style="font-weight:700">Diploma in Midwifery</div>
+            <div class="small">(Institution / Year)</div>
+            <p class="small">Comprehensive training in maternal and newborn health, midwifery practice, and clinical skills. (Replace with your institution and year.)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p class="small">I’d love to connect about patient care, community education, or collaborations. Use the phone number or email on the left, or send a message below.</p>
+        <form onsubmit="handleContact(event)" style="margin-top:12px;display:flex;flex-direction:column;gap:10px;max-width:520px">
+          <input name="name" placeholder="Your name" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06)">
+          <input name="email" placeholder="Your email" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06)">
+          <textarea name="message" rows="4" placeholder="Message" style="padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06)"></textarea>
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <button class="btn btn-ghost" type="reset">Reset</button>
+          </div>
+          <div id="formMsg" style="color:var(--accent);font-weight:600;margin-top:6px"></div>
+        </form>
+      </section>
+
+      <footer>© <span id="year"></span> Nishat Raihana Any • Registered Midwife</footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleContact(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = f.name.value.trim();
+      const email = f.email.value.trim();
+      const message = f.message.value.trim();
+      if(!name || !email || !message){
+        document.getElementById('formMsg').textContent = 'Please fill all fields.';
+        return;
+      }
+      // This simple form doesn't actually send email — you can integrate an email service
+      document.getElementById('formMsg').textContent = 'Thanks — your message looks great! Please contact me directly by phone or email.';
+      f.reset();
+    }
+  </script>
+</body>
+</html>
